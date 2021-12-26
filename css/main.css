@@ -67,6 +67,12 @@ button {
   margin-left: auto;
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 320px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -76,6 +82,12 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
 
@@ -587,6 +599,15 @@ body {
   color: var(--second-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+  }
+}
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -719,10 +740,24 @@ body {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .clients-list {
   justify-content: center;
   margin-bottom: -30px;
   margin-left: -30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -734,15 +769,45 @@ body {
 
 .clients-list__item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   color: var(--icon-social-color);
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .clients-list__item {
+    width: 320px;
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .clients-list__item {
+    width: 480px;
     width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    width: calc(100% / 6 - 30px);
     margin-left: 30px;
   }
 }
@@ -751,7 +816,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 226px;
   height: 92px;
   fill: var(--icon-social-color);
   border: 1px solid var(--icon-social-color);
