@@ -1,0 +1,50 @@
+.spc {
+  background-color: var(--first-color);
+}
+.spc__list {
+  display: flex;
+}
+.spc__item {
+  width: 270px;
+  flex-basis: calc((100% - 60px) / 4);
+  & + & {
+    margin-left: 30px;
+  }
+}
+.spc__thumb {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.antenna {
+  --antenna-color: var(--second-text-color);
+  --antenna-accent-color: var(--btn-color);
+}
+.clock {
+  --clock-color: var(--second-text-color);
+  --clock-accent-color: var(--btn-color);
+}
+.diagramm {
+  --diagramm-color: var(--second-text-color);
+  --diagramm-accent-color: var(--btn-color);
+}
+.astronaut {
+  --astronaut-color: var(--second-text-color);
+  --astronaut-accent-color: var(--btn-color);
+}
+.spc__title {
+  @include font(14px, 1.14, 0.03em, bold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+}
+.spc__text {
+  display: block;
+  @include font(14px, 1.71, 0.03em, normal);
+  color: var(--third-text-color);
+}

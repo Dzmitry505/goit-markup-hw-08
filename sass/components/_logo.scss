@@ -1,0 +1,18 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include font(26px, 1.19, 00.03em, bold);
+  text-decoration: none;
+  color: var(--btn-color);
+  text-decoration: none;
+}
+.logo--correct {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.logo__black {
+  color: var(--second-text-color);
+}
+.logo__white {
+  color: var(--first-color);
+  margin-bottom: 20px;
+}
