@@ -498,7 +498,7 @@ body {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--second-color);
+  background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/hero-mobile-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -514,14 +514,14 @@ body {
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/mobile/hero-mobile-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/hero-mobile-2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-color: var(--main-background-color);
+    background-color: #2f303a;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tab/hero-tab-1x.png);
   }
 }
@@ -534,9 +534,9 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1200px;
+    max-width: 100%;
     min-height: 600px;
-    background-color: var(--main-background-color);
+    background-color: #2f303a;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tab/hero-tab-1x.png);
   }
 }
