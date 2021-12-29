@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--btn-port-color);
+  background-color: var(--first-color);
   padding-top: 60px;
   padding-bottom: 60px;
   @media screen and (min-width: 1200px) {
@@ -13,6 +13,7 @@
 .card {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .card__title {
@@ -27,7 +28,6 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   @media screen and (min-width: 768px) {
     margin: -15px;
   }
@@ -43,8 +43,6 @@
   //   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   //     1px 4px 6px rgba(0, 0, 0, 0.16);
   // }
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
@@ -56,6 +54,7 @@
   @media screen and (min-width: 768px) {
     width: calc(100% / 2 - 30px);
     margin: 15px;
+    border-radius: 0px 0px 4px 4px;
   }
   @media screen and (min-width: 1200px) {
     width: calc(100% / 3 - 30px);
@@ -65,6 +64,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .project-list__link {
   display: block;
   transition: box-shadow var(--transition-time) var(--cubic);
@@ -94,6 +94,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   opacity: 0;
   padding: 63px 24px;
   @include font(18px, 1.56, 0.03em, normal);
