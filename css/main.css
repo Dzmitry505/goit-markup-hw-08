@@ -377,6 +377,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }*/
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 24px;
+  z-index: 999;
+  transform: translateX(100%);
+  background-color: tomato;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
