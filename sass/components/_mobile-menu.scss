@@ -1,0 +1,126 @@
+.open-menu-btn {
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-title-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      fill: var(--btn-color);
+      transition: fill var(--transition-time) var(--cubic);
+    }
+  }
+}
+.open-menu-btn {
+  @media (min-width: 767px) {
+    display: none;
+  }
+}
+
+.close-menu-btn {
+  margin-bottom: 30px;
+  padding: 0;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  background-color: var(--first-color);
+  border: none;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: var(--btn-color);
+    transition: fill var(--transition-time) var(--cubic);
+  }
+}
+.menu-list {
+  font-size: 40px;
+  line-height: 1.8;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.mobile-menu {
+  position: fixed;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  display: flex;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  @media (min-width: 767px) {
+    display: none;
+  }
+}
+.mob-nav__link {
+  text-decoration: none;
+  @include font(40px, 1.17, 0.02em, 500);
+  color: var(--second-text-color);
+  transition: color var(--transition-time) var(--cubic);
+  &:hover,
+  &:focus,
+  &.current {
+    color: var(--btn-color);
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--btn-color);
+    border-radius: 2px;
+  }
+}
+.mob-contacts {
+  margin-bottom: 64px;
+}
+.mob-contacts__item {
+  @include font(24px, 1.17, 0.02em, 500);
+}
+
+.mob-tel__item {
+  @include font(34px, 1.18, 0.02em, 500);
+  margin-bottom: 32px;
+}
+.mob-social-list {
+  display: flex;
+}
+.mob-social-list .mob-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mob-social__link {
+  color: var(--btn-color);
+  padding-left: 10px;
+  padding-right: 10px;
+  &:hover,
+  &:focus {
+    color: var(--btn-color);
+  }
+}
+.mob-contacts__link {
+  color: var(--third-text-color);
+  &:hover,
+  &:focus {
+    color: var(--btn-color);
+    transition: color var(--transition-time) var(--cubic);
+  }
+}

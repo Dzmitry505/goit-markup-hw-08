@@ -4,6 +4,9 @@
   text-decoration: none;
   color: var(--btn-color);
   text-decoration: none;
+  @media screen and (max-width: 1199px) {
+    @include font(24px, 1.17, 0.03em, bold);
+  }
 }
 .logo--correct {
   display: inline-block;
