@@ -1315,9 +1315,31 @@ body {
   fill: var(--first-color);
 }
 
-.footer__container {
-  display: flex;
-  align-items: baseline;
+@media (max-width: 1199px) {
+  .footer__container {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .tablet__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tablet__container {
+    align-items: baseline;
+  }
 }
 
 .footer {
@@ -1356,17 +1378,29 @@ body {
 }
 
 .footer-list :not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .footer__block {
-  max-width: 231px;
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .footer__block {
+    max-width: 231px;
+    margin-right: 70px;
+  }
 }
 
 .footer-social__block {
-  display: block;
-  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 480px) {
+  .footer-social__block {
+    display: block;
+    margin-right: auto;
+  }
 }
 
 .footer-social__title {
@@ -1385,16 +1419,17 @@ body {
 }
 
 .subscribe-form__section {
-  display: flex;
+  align-items: center;
 }
 
 .subscribe-form__mail {
-  width: 358px;
+  width: 450px;
   height: 50px;
   margin: 0px;
   padding: 0px;
-  margin-right: 12px;
-  padding-left: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1407,15 +1442,31 @@ body {
   color: var(--eighth-footer-color);
 }
 
+@media (min-width: 1200px) {
+  .subscribe-form__mail {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+  }
+}
+
 .subscribe-form__btn {
-  display: flex;
-  margin: 0px;
   padding: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .subscribe-form__btn {
+    display: flex;
+  }
 }
 
 .subscribe-form__icon {
   fill: currentColor;
   margin-left: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-list__btn {
