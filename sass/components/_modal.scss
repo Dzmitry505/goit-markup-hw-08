@@ -14,21 +14,29 @@
 }
 .modal {
   position: absolute;
+  width: 310px;
   top: 50%;
   left: 50%;
-  padding: 40px;
-
-  width: 528px;
-  min-height: 581px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
   background-color: var(--first-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: scale(1) rotate(0) translate(-50%, -50%);
   transition: transform var(--transition-time) var(--cubic);
-  @media (max-width: 1199px) {
-    width: 450px;
+  @media (min-width: 480px) {
+    min-width: 450px;
     min-height: 609px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  @media (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
   }
 }
 .modal__close-btn {
@@ -135,7 +143,7 @@
   left: 0;
   display: block;
   margin-bottom: 4px;
-  @include font(12px, 1.14, 0.01em, normal);
+  @include font(14px, 1.71, 0.03em, normal);
   color: var(--third-text-color);
   transition: border-color var(--transition-time) var(--cubic),
     outline var(--transition-time) var(--cubic);
@@ -155,6 +163,9 @@
   @include font(14px, 1.71, 00.03em, normal);
   justify-content: center;
   color: var(--third-text-color);
+  @media (max-width: 1199px) {
+    @include font(12px, 1.17, 0.03em, normal);
+  }
   span {
     display: flex;
     align-items: center;
@@ -196,6 +207,9 @@
   &:focus {
     outline: 2px solid var(--btn-color);
     border-radius: 2px;
+  }
+  @media (max-width: 1199px) {
+    @include font(12px, 1.17, 0.03em, normal);
   }
 }
 
