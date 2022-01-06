@@ -19,3 +19,15 @@
   color: var(--first-color);
   margin-bottom: 20px;
 }
+.space {
+  @media (max-width: 767px) {
+    padding: 16px 0;
+  }
+  @media (min-width: 768px) {
+    padding: 26px 0;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}

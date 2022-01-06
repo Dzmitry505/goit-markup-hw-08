@@ -1,11 +1,11 @@
 .open-menu-btn {
   @media screen and (max-width: 767px) {
     margin-left: auto;
-    padding: 0;
-    top: 10px;
-    right: 15px;
     width: 40px;
     height: 40px;
+    padding: 10px 0;
+    top: 50%;
+    left: 50%;
     background-color: var(--main-title-color);
     border: none;
     display: flex;
@@ -26,40 +26,47 @@
 }
 
 .close-menu-btn {
-  margin-bottom: 30px;
-  padding: 0;
-  margin-left: auto;
-  width: 40px;
-  height: 40px;
-  background-color: var(--first-color);
-  border: none;
-  display: block;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
   &:hover,
   &:focus {
     fill: var(--btn-color);
     transition: fill var(--transition-time) var(--cubic);
   }
 }
+
 .menu-list {
   font-size: 40px;
-  line-height: 1.8;
+  line-height: 1.17;
   font-weight: 500;
   letter-spacing: 0.03em;
 }
 .mobile-menu {
+  transition: transform var(--transition-time) var(--cubic);
   position: fixed;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 9;
-  padding-top: 10px;
+  inset: 0;
+  z-index: 999;
+  padding-top: 48px;
   padding-bottom: 48px;
   display: flex;
+  overflow-y: auto;
+  &.is-hidden {
+    transform: translateX(100%);
+    transition: var(--transition-time) var(--cubic);
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -69,6 +76,12 @@
   @media (min-width: 767px) {
     display: none;
   }
+}
+.mob-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu-top {
+  margin-bottom: 60px;
 }
 .mob-nav__link {
   text-decoration: none;
@@ -101,9 +114,13 @@
 .mob-tel__item {
   @include font(34px, 1.18, 0.02em, 500);
   margin-bottom: 32px;
+  @media (max-width: 479px) {
+    @include font(28px, 1.17, 0.02em, 400);
+  }
 }
 .mob-social-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .mob-social-list .mob-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);

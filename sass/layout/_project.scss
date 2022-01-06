@@ -28,6 +28,7 @@
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   @media screen and (min-width: 768px) {
     margin: -15px;
   }
@@ -60,13 +61,18 @@
     width: calc(100% / 3 - 30px);
   }
   background: var(--first-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
 }
 
 .project-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow var(--transition-time) var(--cubic);
   &:hover,
   &:focus {
@@ -97,6 +103,7 @@
   height: 100%;
   opacity: 0;
   padding: 63px 24px;
+  overflow-y: auto;
   @include font(18px, 1.56, 0.03em, normal);
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--first-color);
@@ -117,6 +124,7 @@
 }
 
 .card__squad {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid var(--border-item-color);
   border-top: 0;
