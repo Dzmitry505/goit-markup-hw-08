@@ -75,7 +75,7 @@ button {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480;
+    width: 480px;
   }
 }
 
@@ -367,7 +367,8 @@ body {
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
+    max-width: none;
+    min-height: 581px;
   }
 }
 
@@ -518,12 +519,11 @@ body {
 }
 
 .modal-form__check-text {
-  display: flex;
-  margin-bottom: 30px;
+  display: inline-block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  font-weight: normal;
+  font-weight: 400;
   justify-content: center;
   color: var(--third-text-color);
 }
@@ -533,12 +533,12 @@ body {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    font-weight: normal;
+    font-weight: 400;
   }
 }
 
 .modal-form__check-text span {
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -556,6 +556,14 @@ body {
 .modal-form__icon-check {
   fill: transparent;
   transition: fill var(--transition-time) var(--cubic);
+}
+
+@media (min-width: 1200px) {
+  .modal-form__icon-check {
+    position: absolute;
+    width: 14px;
+    height: 13px;
+  }
 }
 
 .modal-form__check:checked + .modal-form__check-text span {
@@ -591,6 +599,10 @@ body {
     letter-spacing: 0.03em;
     font-weight: normal;
   }
+}
+
+.modal-form__appol {
+  margin-bottom: 30px;
 }
 
 /*.modal-check-text::before {
@@ -854,7 +866,7 @@ body {
 
 @media screen and (min-width: 769px) {
   .hero {
-    min-height: 600px;
+    min-height: 400px;
     background-color: #2f303a;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tab/hero-tab-1x.png);
   }
@@ -928,12 +940,12 @@ body {
 .spc__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
   .spc__item:not(:last-child) {
     margin-bottom: 30px;
+    align-items: center;
   }
 }
 
@@ -1136,7 +1148,6 @@ body {
 
 .team__item {
   display: block;
-  margin-bottom: 30px;
   background: var(--first-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -1544,10 +1555,6 @@ body {
   border: none;
 }
 
-.filter-list__btn:not(:first-child) {
-  margin-left: 8px;
-}
-
 .filter-list__btn:hover, .filter-list__btn:focus {
   color: var(--first-color);
   background-color: var(--btn-color);
@@ -1559,9 +1566,17 @@ body {
   background-color: var(--btn-color);
 }
 
-.filter-list__item {
-  margin-right: 18px;
-  margin-bottom: 15px;
+@media (max-width: 767px) {
+  .filter-list__item {
+    margin-right: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .filter-list__item:not(:first-child) {
+    margin-left: 8px;
+  }
 }
 
 .filter-list {
@@ -1625,7 +1640,6 @@ body {
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
